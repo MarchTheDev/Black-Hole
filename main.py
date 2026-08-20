@@ -84,6 +84,7 @@ class BlackHoleBot(discord.Bot):
 
     async def on_ready(self):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
+        await self.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Black Hole"))
 
         print("Syncing slash commands globally...")
         try:
