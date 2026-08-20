@@ -87,7 +87,7 @@ class BlackHoleBot(discord.Bot):
 
         print("Syncing slash commands globally...")
         try:
-            self.sync_commands()
+            await self.sync_commands()
             print("Successfully synced slash commands globally.")
         except Exception as e:
             print(f"Failed to sync slash commands: {e}")
