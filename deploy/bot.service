@@ -1,0 +1,14 @@
+[Unit]
+Description=Black Hole Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/blackhole-bot
+ExecStart=/opt/blackhole-bot/venv/bin/python main.py
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
